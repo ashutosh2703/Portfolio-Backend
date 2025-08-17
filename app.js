@@ -34,6 +34,10 @@ app.use(
   })
 );
 
+app.get("/",(req,res)=>{
+  res.send({data:"Welcome to portfolio website!"});
+})
+
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/timeline", timelineRouter);
 app.use("/api/v1/message", messageRouter);
